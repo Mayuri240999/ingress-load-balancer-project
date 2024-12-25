@@ -1,0 +1,14 @@
+# Use the official Nginx image as the base image
+FROM nginx:latest
+
+# Set the working directory to /usr/share/nginx/html/angry
+WORKDIR /usr/share/nginx/html/angry
+
+# Copy the HTML file to the working directory
+COPY angry.html /usr/share/nginx/html/angry/index.html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]

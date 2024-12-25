@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: happy-deployment
+  labels:
+    app: happy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: happy
+  template:
+    metadata:
+      labels:
+        app: happy
+    spec:
+      containers:
+      - name: happy
+        image: public.ecr.aws/d7u7t5y2/happy
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sad-deployment
+  labels:
+    app: sad
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sad
+  template:
+    metadata:
+      labels:
+        app: sad
+    spec:
+      containers:
+      - name: sad
+        image: public.ecr.aws/d7u7t5y2/sad
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angry-deployment
+  labels:
+    app: angry
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: angry
+  template:
+    metadata:
+      labels:
+        app: angry
+    spec:
+      containers:
+      - name: angry
+        image: public.ecr.aws/d7u7t5y2/angry
+        ports:
+        - containerPort: 80
