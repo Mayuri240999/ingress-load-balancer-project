@@ -13,8 +13,8 @@ This project demonstrates the implementation of path-based routing using an AWS 
 2. HTML code: through html code happy, sad, angry emojis have been created in .html file and according to that runtime and dependencies will written in deployment file
 3. Service and Pod Deployment: Kubernetes Services expose backend pods for each path (happy-service, sad-service, angry-service).
 Each service corresponds to a unique deployment managing one or more pods.
-4.AWS ALB Creation: The AWS ALB is created and managed by ingress ,the AWS Load Balancer Controller, which integrates with Kubernetes Ingress resources.
-Path-Based Routing Configuration: An Ingress resource is defined in the Kubernetes cluster with rules to route traffic based on URL paths (/happy, /sad, /angry).
+AWS ALB Creation: The AWS ALB is created and managed by ingress ,the AWS Load Balancer Controller, which integrates with Kubernetes Ingress resources.
+4. Path-Based Routing Configuration: An Ingress resource is defined in the Kubernetes cluster with rules to route traffic based on URL paths (/happy, /sad, /angry).
 The ingress uses the ALB to route incoming traffic to specific backend services.
 5. Traffic Flow:1. Client Request: Traffic is directed to the AWS ALB, which forwards requests to the Kubernetes Ingress.
                               2. Ingress Processing: The Ingress resource evaluates the request path and routes it to the appropriate service.
