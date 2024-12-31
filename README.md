@@ -38,13 +38,24 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
 
 ### Step 2 :
 4. Use the cluster.yml file to create cluster using eksctl command
-5. Then Build Docker Image through Docker build and push those images in AWS ECR then use this image link in your deployment file
+   ```
+   eksctl create cluster -f cluster.yml
+   ```
+6. Then Build Docker Image through Docker build and push those images in AWS ECR then use this image link in your deployment file
+   ```
+   docker build -t happy -f happy .       
+   docker build -t sad -f sad .
+   docker build -t angry -f angry .
+   ```
    
 ![Screenshot 2024-12-31 235148](https://github.com/user-attachments/assets/1c6e342d-e03f-40ff-b9ae-827613bce45c)
 
 ### Step 3 :
 6. Then execute the deployment.yml file through kubectl commands and service.yml file also where we have created cluster ip (within the cluster) so that we can see our webpage is running good
-
+```
+kubectl apply -f deployment.yml
+kubectl apply -f service.yml
+```
    
    
 ![image-3](https://github.com/user-attachments/assets/257e2313-78a8-4b64-a4ec-e4eafd031962)
@@ -58,7 +69,11 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
 
 ![image-5](https://github.com/user-attachments/assets/50a6637d-fdee-4488-af91-210af9cbc425)
 ### Step 5 :
-9. Now use my files ingress-resource.yml and ingressclass.yml to create your load-balancer
+9. Now use my files ingress-resource.yml and ingressclass.yml file to create your load-balancer
+```
+kubectl apply -f ingress-resource.yml
+kubectl apply -f ingressclass.yml
+```
    
 ![image-6](https://github.com/user-attachments/assets/fd57c844-eaf5-4b0d-ad05-001b97eb676a)
 ![image-7](https://github.com/user-attachments/assets/33a27735-604d-4cf0-8551-b05a7607b443)
