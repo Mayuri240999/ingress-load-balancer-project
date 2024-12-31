@@ -38,8 +38,20 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
 
 ### Step 2 :
 4. Use the cluster.yml file to create cluster using eksctl command
-5. Then Build Docker Image through Docker build and push those images in AWS ECR 
+5. Then Build Docker Image through Docker build and push those images in AWS ECR then use this image link in your deployment file
+   
+![Screenshot 2024-12-31 235148](https://github.com/user-attachments/assets/1c6e342d-e03f-40ff-b9ae-827613bce45c)
+
+### Step 3 :
+6. Then execute the deployment.yml file through kubectl commands and service.yml file also where we have created cluster ip (within the cluster) so that we can see our webpage is running good
+
+   
+   
 ![image-3](https://github.com/user-attachments/assets/257e2313-78a8-4b64-a4ec-e4eafd031962)
+
+### Step 4 :
+7. Now we are ready to create our Ingress, for that first we need to create controller and all those commands are available on AWS official Documentation
+
 ![image-4](https://github.com/user-attachments/assets/ca8aa7e8-434f-413e-be8d-e3905af867aa)
 ![image-5](https://github.com/user-attachments/assets/50a6637d-fdee-4488-af91-210af9cbc425)
 ![image-6](https://github.com/user-attachments/assets/fd57c844-eaf5-4b0d-ad05-001b97eb676a)
