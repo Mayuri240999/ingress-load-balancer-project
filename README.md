@@ -41,7 +41,7 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
    ```
    eksctl create cluster -f cluster.yml
    ```
-6. Then Build Docker Image through Docker build and push those images in AWS ECR then use this image link in your deployment file
+6. Then Build Docker Image through Docker build and push those images in AWS ECR then use this image URI in your deployment file
    ```
    docker build -t happy -f happy .       
    docker build -t sad -f sad .
