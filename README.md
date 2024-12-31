@@ -53,7 +53,13 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
 7. Now we are ready to create our Ingress, for that first we need to create controller and all those commands are available on AWS official Documentation
 
 ![image-4](https://github.com/user-attachments/assets/ca8aa7e8-434f-413e-be8d-e3905af867aa)
+
+8. After all steps has done succesfully you will see your controller is ready
+
 ![image-5](https://github.com/user-attachments/assets/50a6637d-fdee-4488-af91-210af9cbc425)
+### Step 5 :
+9. Now use my files ingress-resource.yml and ingressclass.yml to create your load-balancer
+   
 ![image-6](https://github.com/user-attachments/assets/fd57c844-eaf5-4b0d-ad05-001b97eb676a)
 ![image-7](https://github.com/user-attachments/assets/33a27735-604d-4cf0-8551-b05a7607b443)
 ![image-8](https://github.com/user-attachments/assets/d43841b0-d930-4f8a-8127-70f9b75edb75)
