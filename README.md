@@ -20,3 +20,30 @@ The ingress uses the ALB to route incoming traffic to specific backend services.
                               2. Ingress Processing: The Ingress resource evaluates the request path and routes it to the appropriate service.
                               3.  Service Delivery: The service sends the request to the matching pod, where the desired application logic is executed.
 
+## Overview:
+
+![Copy of Cloud Architecture - Page 1](https://github.com/user-attachments/assets/1333e0b8-4fbe-4aae-884e-9d10c6602302)
+
+## Steps to do :
+### Step 1 :     
+### Create EC2 instance:
+
+![image-1](https://github.com/user-attachments/assets/36dbb2ed-cf75-4acf-b6ed-13bb8787758c)
+
+2. you can use Instance type as t2.medium or larger instance type than this because it is the requirement for kubernetes cluster
+3. After that first you have to install Docker ,kubectl,eksctl,aws cli from their official website
+   
+
+![image-2](https://github.com/user-attachments/assets/187ddb5b-5fa1-46e1-afe7-ce4b5248a4fb)
+
+### Step 2 :
+4. Use the cluster.yml file to create cluster using eksctl command
+5. Then Build Docker Image through Docker build and push those images in AWS ECR 
+![image-3](https://github.com/user-attachments/assets/257e2313-78a8-4b64-a4ec-e4eafd031962)
+![image-4](https://github.com/user-attachments/assets/ca8aa7e8-434f-413e-be8d-e3905af867aa)
+![image-5](https://github.com/user-attachments/assets/50a6637d-fdee-4488-af91-210af9cbc425)
+![image-6](https://github.com/user-attachments/assets/fd57c844-eaf5-4b0d-ad05-001b97eb676a)
+![image-7](https://github.com/user-attachments/assets/33a27735-604d-4cf0-8551-b05a7607b443)
+![image-8](https://github.com/user-attachments/assets/d43841b0-d930-4f8a-8127-70f9b75edb75)
+![image-9](https://github.com/user-attachments/assets/b06bb188-05ff-44bc-b276-990f345cadb8)
+![image-10](https://github.com/user-attachments/assets/a1c07f5e-e867-4566-894d-0f5341bd51a4)
